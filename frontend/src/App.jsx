@@ -102,6 +102,7 @@ export default function App() {
 
     // Simulate processing delay then call backend
     setTimeout(() => {
+      // local immediate feedback (keeps previous simulated message)
       showTypingEffect(
         `🧠 Jarvis received: "${message}" — querying AI core...`
       );
@@ -111,11 +112,11 @@ export default function App() {
     }, 800);
   };
 
-  // ✅ Updated backend endpoint for production (Render)
+  // New function to send query to backend (as requested)
   const sendToBackend = async (message) => {
     try {
       setFetchingData(true);
-      const res = await fetch("https://jarvis-rag.onrender.com/chat", {
+      const res = await fetch("http://localhost:8000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: message }),
