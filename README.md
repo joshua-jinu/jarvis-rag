@@ -52,7 +52,7 @@ All natural language understanding and summarization tasks are powered by the Ge
 
 🧩 Tech Stack
 Layer	Tech
-Frontend	Vite + React, Tailwind CSS
+Frontend	Vite + React, 
 Voice I/O	Web Speech API, pyttsx3
 Backend	Python + FastAPI
 AI API	Gemini API
@@ -72,3 +72,4 @@ Jarvis connects Gemini’s understanding to tools like Spotify or PDF summarizer
 
 RAG (Retrieval-Augmented Generation):
 Enables grounded responses using embeddings from PDFs or web content — minimizing hallucinations.
+
